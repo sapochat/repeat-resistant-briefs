@@ -1,0 +1,33 @@
+[
+  {
+    "date": "2026-07-20",
+    "selected": [
+      "signal:alpha",
+      "signal:beta",
+      "signal:gamma"
+    ],
+    "suppressed": [],
+    "source_pack": "day-1-2026-07-20.md"
+  },
+  {
+    "date": "2026-07-21",
+    "selected": [
+      "signal:beta",
+      "signal:delta"
+    ],
+    "suppressed": [
+      "signal:alpha"
+    ],
+    "source_pack": "day-2-2026-07-21.md"
+  },
+  {
+    "date": "2026-07-22",
+    "selected": [
+      "signal:epsilon"
+    ],
+    "suppressed": [
+      "signal:beta"
+    ],
+    "source_pack": "day-3-2026-07-22.md"
+  }
+]
