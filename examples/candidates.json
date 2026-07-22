@@ -1,0 +1,30 @@
+[
+  {
+    "id": "repo:openhuman",
+    "title": "OpenHuman",
+    "url": "https://github.com/tinyhumansai/openhuman?utm_source=feed",
+    "source": "github",
+    "quality": 9,
+    "relevance": 8,
+    "substance": "A previously covered personal-agent repository."
+  },
+  {
+    "id": "paper:new-context",
+    "title": "A New Context Method",
+    "url": "https://example.org/context-method",
+    "source": "rss",
+    "quality": 8,
+    "relevance": 9,
+    "substance": "A concrete method with reproducible evaluation."
+  },
+  {
+    "id": "repo:openhuman",
+    "title": "OpenHuman adds local encrypted memory",
+    "url": "https://github.com/tinyhumansai/openhuman",
+    "source": "github",
+    "quality": 9,
+    "relevance": 9,
+    "substance": "A material privacy update.",
+    "follow_up_reason": "New local encrypted-memory implementation changes the prior assessment."
+  }
+]
