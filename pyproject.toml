@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repeat-resistant-briefs"
+version = "0.1.0"
+description = "Build history-aware source packs for recurring reports and newsletters"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Santi Pochat"}]
+
+[project.scripts]
+repeat-resistant-briefs = "repeat_resistant_briefs.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

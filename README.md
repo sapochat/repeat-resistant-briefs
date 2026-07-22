@@ -11,12 +11,16 @@ candidate sources → normalize and score → compare with delivered history
 → suppress unjustified repeats → source pack → human/agent synthesis → delivered history
 ```
 
-## Run the example
+## Install and run the example
 
 ```bash
-PYTHONPATH=src python3 -m repeat_resistant_briefs.cli   examples/candidates.json examples/history.json /tmp/source-pack.md
+python3 -m venv .venv
+.venv/bin/pip install -e .
 
-python3 -m unittest discover -s tests -v
+.venv/bin/repeat-resistant-briefs \
+  examples/candidates.json examples/history.json /tmp/source-pack.md
+
+.venv/bin/python -m unittest discover -s tests -v
 ```
 
 Candidates may include `follow_up_reason`; repeated items are admitted only when that reason is concrete. The output is a source pack, not a finished newsletter.
