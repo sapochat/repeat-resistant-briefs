@@ -4,11 +4,24 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 TRACKING_PREFIXES = ("utm_", "ref", "source")
 
 def canonical_url(url: str) -> str:
-    parts = urlsplit(url.strip())
-    host = parts.netloc.lower().removeprefix("www.")
+    raw = url.strip()
+    parts = urlsplit(raw)
+    if not parts.netloc:
+        parts = urlsplit(f"https://{raw.lstrip('/')}")
+    scheme = parts.scheme.lower() or "https"
+    try:
+        port = parts.port
+    except ValueError:
+        netloc = parts.netloc.lower().removeprefix("www.")
+    else:
+        host = (parts.hostname or "").lower().removeprefix("www.")
+        if ":" in host:
+            host = f"[{host}]"
+        default_port = (scheme == "http" and port == 80) or (scheme == "https" and port == 443)
+        netloc = host if port is None or default_port else f"{host}:{port}"
     path = parts.path.rstrip("/") or "/"
     query = [(k,v) for k,v in parse_qsl(parts.query, keep_blank_values=True) if not k.lower().startswith(TRACKING_PREFIXES)]
-    return urlunsplit((parts.scheme.lower() or "https", host, path, urlencode(sorted(query)), ""))
+    return urlunsplit((scheme, netloc, path, urlencode(sorted(query)), ""))
 
 def identity(item: dict) -> str:
     return item.get("id") or canonical_url(item["url"])
