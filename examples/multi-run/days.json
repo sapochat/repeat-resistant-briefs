@@ -2,24 +2,146 @@
   {
     "date": "2026-07-20",
     "candidates": [
-      {"id": "signal:alpha", "title": "Alpha launches", "url": "https://example.org/alpha?utm_source=feed", "source": "rss", "quality": 9, "relevance": 9, "substance": "A strong new launch with clear operator implications."},
-      {"id": "signal:beta", "title": "Beta publishes a benchmark", "url": "https://example.org/beta", "source": "research", "quality": 8, "relevance": 9, "substance": "A reproducible benchmark with useful methodology."},
-      {"id": "signal:gamma", "title": "Gamma releases a small tool", "url": "https://example.org/gamma", "source": "github", "quality": 7, "relevance": 8, "substance": "A strange but useful builder artifact."}
-    ]
+      {
+        "id": "signal:alpha",
+        "title": "Alpha launches",
+        "url": "https://example.org/alpha?utm_source=feed",
+        "source": "rss",
+        "quality": 9,
+        "relevance": 9,
+        "substance": "A strong new launch with clear operator implications."
+      },
+      {
+        "id": "signal:beta",
+        "title": "Beta publishes a benchmark",
+        "url": "https://example.org/beta",
+        "source": "research",
+        "quality": 8,
+        "relevance": 9,
+        "substance": "A reproducible benchmark with useful methodology."
+      },
+      {
+        "id": "signal:gamma",
+        "title": "Gamma releases a small tool",
+        "url": "https://example.org/gamma",
+        "source": "github",
+        "quality": 7,
+        "relevance": 8,
+        "substance": "A strange but useful builder artifact."
+      }
+    ],
+    "receipt": {
+      "report_id": "demo-day-1",
+      "delivered_at": "2026-07-20",
+      "items": [
+        {
+          "identity": "signal:alpha"
+        },
+        {
+          "identity": "signal:beta"
+        }
+      ]
+    }
   },
   {
     "date": "2026-07-21",
     "candidates": [
-      {"id": "signal:alpha", "title": "Alpha is still popular", "url": "https://example.org/alpha", "source": "rss", "quality": 9, "relevance": 9, "substance": "No material change since yesterday."},
-      {"id": "signal:beta", "title": "Beta corrects its benchmark", "url": "https://example.org/beta", "source": "research", "quality": 9, "relevance": 9, "substance": "The corrected methodology changes the result.", "follow_up_reason": "A published correction materially changes the benchmark conclusion."},
-      {"id": "signal:delta", "title": "Delta documents a new method", "url": "https://example.org/delta", "source": "blog", "quality": 8, "relevance": 8, "substance": "A new method with enough detail to reproduce."}
-    ]
+      {
+        "id": "signal:alpha",
+        "title": "Alpha is still popular",
+        "url": "https://example.org/alpha",
+        "source": "rss",
+        "quality": 9,
+        "relevance": 9,
+        "substance": "No material change since yesterday."
+      },
+      {
+        "id": "signal:beta",
+        "title": "Beta corrects its benchmark",
+        "url": "https://example.org/beta",
+        "source": "research",
+        "quality": 9,
+        "relevance": 9,
+        "substance": "The corrected methodology changes the result.",
+        "follow_up": {
+          "event_id": "beta-correction-2026-07-21",
+          "what_changed": "The authors corrected a data leakage error and reran the benchmark.",
+          "why_it_matters": "The corrected result reverses the reported ranking.",
+          "evidence_url": "https://example.org/beta/correction"
+        }
+      },
+      {
+        "id": "signal:delta",
+        "title": "Delta documents a new method",
+        "url": "https://example.org/delta",
+        "source": "blog",
+        "quality": 8,
+        "relevance": 8,
+        "substance": "A new method with enough detail to reproduce."
+      },
+      {
+        "id": "signal:gamma",
+        "title": "Gamma releases a small tool",
+        "url": "https://example.org/gamma",
+        "source": "github",
+        "quality": 7,
+        "relevance": 8,
+        "substance": "A strange but useful builder artifact."
+      }
+    ],
+    "receipt": {
+      "report_id": "demo-day-2",
+      "delivered_at": "2026-07-21",
+      "items": [
+        {
+          "identity": "signal:gamma"
+        },
+        {
+          "identity": "signal:beta",
+          "event_id": "beta-correction-2026-07-21"
+        },
+        {
+          "identity": "signal:delta"
+        }
+      ]
+    }
   },
   {
     "date": "2026-07-22",
     "candidates": [
-      {"id": "signal:beta", "title": "Another Beta recap", "url": "https://example.org/beta", "source": "social", "quality": 8, "relevance": 8, "substance": "A recap with no new evidence."},
-      {"id": "signal:epsilon", "title": "Epsilon ships local inference", "url": "https://example.org/epsilon", "source": "primary", "quality": 9, "relevance": 10, "substance": "A genuinely new local-inference release."}
-    ]
+      {
+        "id": "signal:beta",
+        "title": "Another Beta recap",
+        "url": "https://example.org/beta",
+        "source": "social",
+        "quality": 8,
+        "relevance": 8,
+        "substance": "A recap with no new evidence.",
+        "follow_up": {
+          "event_id": "beta-correction-2026-07-21",
+          "what_changed": "The same benchmark rerun fixes leaked evaluation data.",
+          "why_it_matters": "The revised ranking changes which system leads.",
+          "evidence_url": "https://example.org/beta/correction"
+        }
+      },
+      {
+        "id": "signal:epsilon",
+        "title": "Epsilon ships local inference",
+        "url": "https://example.org/epsilon",
+        "source": "primary",
+        "quality": 9,
+        "relevance": 10,
+        "substance": "A genuinely new local-inference release."
+      }
+    ],
+    "receipt": {
+      "report_id": "demo-day-3",
+      "delivered_at": "2026-07-22",
+      "items": [
+        {
+          "identity": "signal:epsilon"
+        }
+      ]
+    }
   }
 ]

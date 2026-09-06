@@ -29,10 +29,20 @@ class BriefTests(unittest.TestCase):
         selected,suppressed=select_candidates(c,[{"url":"https://example.com:443/x"}])
         self.assertEqual(selected, [])
         self.assertEqual(len(suppressed),1)
-    def test_invalid_ports_do_not_crash_candidate_selection(self):
+    def test_invalid_ports_are_rejected(self):
+        # Malformed URLs must fail validation, not become usable identities.
         c=[{"title":"X","url":"https://example.com:bad/x","quality":9,"relevance":9}]
-        selected,suppressed=select_candidates(c,[{"url":"https://example.com:99999/x"}])
-        self.assertEqual(len(selected),1)
-        self.assertEqual(suppressed, [])
+        with self.assertRaises(ValueError):
+            select_candidates(c,[{"url":"https://example.com:99999/x"}])
+
+class ResultRendererTests(unittest.TestCase):
+    def test_render_uses_result_without_reselection(self):
+        from repeat_resistant_briefs import briefs
+        self.assertTrue(hasattr(briefs,'render_source_pack'))
+        from unittest.mock import patch
+        rows=[{'title':'X','url':'https://e/x','quality':9,'relevance':9}]
+        result=briefs.select_result(rows,[])
+        with patch.object(briefs,'select_result',side_effect=AssertionError('reranked')):
+            self.assertIn('### [X]',briefs.render_source_pack(result))
 
 if __name__ == "__main__": unittest.main()
