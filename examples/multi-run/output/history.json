@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "identity": "signal:alpha",
+      "id": "signal:alpha",
+      "url": "https://example.org/alpha?utm_source=feed",
+      "canonical_url": "https://example.org/alpha",
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1",
+      "report_id": "demo-day-1",
+      "delivered_at": "2026-07-20T00:00:00Z"
+    },
+    {
+      "identity": "signal:beta",
+      "id": "signal:beta",
+      "url": "https://example.org/beta",
+      "canonical_url": "https://example.org/beta",
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1",
+      "report_id": "demo-day-1",
+      "delivered_at": "2026-07-20T00:00:00Z"
+    },
+    {
+      "identity": "signal:gamma",
+      "id": "signal:gamma",
+      "url": "https://example.org/gamma",
+      "canonical_url": "https://example.org/gamma",
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1",
+      "report_id": "demo-day-2",
+      "delivered_at": "2026-07-21T00:00:00Z"
+    },
+    {
+      "identity": "signal:beta",
+      "id": "signal:beta",
+      "url": "https://example.org/beta",
+      "canonical_url": "https://example.org/beta",
+      "follow_up": {
+        "event_id": "beta-correction-2026-07-21",
+        "what_changed": "The authors corrected a data leakage error and reran the benchmark.",
+        "why_it_matters": "The corrected result reverses the reported ranking.",
+        "evidence_url": "https://example.org/beta/correction"
+      },
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1",
+      "event_id": "beta-correction-2026-07-21",
+      "report_id": "demo-day-2",
+      "delivered_at": "2026-07-21T00:00:00Z"
+    },
+    {
+      "identity": "signal:delta",
+      "id": "signal:delta",
+      "url": "https://example.org/delta",
+      "canonical_url": "https://example.org/delta",
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1",
+      "report_id": "demo-day-2",
+      "delivered_at": "2026-07-21T00:00:00Z"
+    },
+    {
+      "identity": "signal:epsilon",
+      "id": "signal:epsilon",
+      "url": "https://example.org/epsilon",
+      "canonical_url": "https://example.org/epsilon",
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1",
+      "report_id": "demo-day-3",
+      "delivered_at": "2026-07-22T00:00:00Z"
+    }
+  ],
+  "receipts": [
+    {
+      "report_id": "demo-day-1",
+      "delivered_at": "2026-07-20T00:00:00Z",
+      "items": [
+        {
+          "identity": "signal:alpha",
+          "id": "signal:alpha",
+          "url": "https://example.org/alpha?utm_source=feed",
+          "canonical_url": "https://example.org/alpha",
+          "canonicalization_profile": "conservative",
+          "canonicalization_version": "conservative-v1"
+        },
+        {
+          "identity": "signal:beta",
+          "id": "signal:beta",
+          "url": "https://example.org/beta",
+          "canonical_url": "https://example.org/beta",
+          "canonicalization_profile": "conservative",
+          "canonicalization_version": "conservative-v1"
+        }
+      ],
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1"
+    },
+    {
+      "report_id": "demo-day-2",
+      "delivered_at": "2026-07-21T00:00:00Z",
+      "items": [
+        {
+          "identity": "signal:beta",
+          "id": "signal:beta",
+          "url": "https://example.org/beta",
+          "canonical_url": "https://example.org/beta",
+          "follow_up": {
+            "event_id": "beta-correction-2026-07-21",
+            "what_changed": "The authors corrected a data leakage error and reran the benchmark.",
+            "why_it_matters": "The corrected result reverses the reported ranking.",
+            "evidence_url": "https://example.org/beta/correction"
+          },
+          "canonicalization_profile": "conservative",
+          "canonicalization_version": "conservative-v1",
+          "event_id": "beta-correction-2026-07-21"
+        },
+        {
+          "identity": "signal:delta",
+          "id": "signal:delta",
+          "url": "https://example.org/delta",
+          "canonical_url": "https://example.org/delta",
+          "canonicalization_profile": "conservative",
+          "canonicalization_version": "conservative-v1"
+        },
+        {
+          "identity": "signal:gamma",
+          "id": "signal:gamma",
+          "url": "https://example.org/gamma",
+          "canonical_url": "https://example.org/gamma",
+          "canonicalization_profile": "conservative",
+          "canonicalization_version": "conservative-v1"
+        }
+      ],
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1"
+    },
+    {
+      "report_id": "demo-day-3",
+      "delivered_at": "2026-07-22T00:00:00Z",
+      "items": [
+        {
+          "identity": "signal:epsilon",
+          "id": "signal:epsilon",
+          "url": "https://example.org/epsilon",
+          "canonical_url": "https://example.org/epsilon",
+          "canonicalization_profile": "conservative",
+          "canonicalization_version": "conservative-v1"
+        }
+      ],
+      "canonicalization_profile": "conservative",
+      "canonicalization_version": "conservative-v1"
+    }
+  ]
+}

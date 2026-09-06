@@ -1,0 +1,16 @@
+{
+  "report_id": "demo-day-2",
+  "delivered_at": "2026-07-21",
+  "items": [
+    {
+      "identity": "signal:gamma"
+    },
+    {
+      "identity": "signal:beta",
+      "event_id": "beta-correction-2026-07-21"
+    },
+    {
+      "identity": "signal:delta"
+    }
+  ]
+}

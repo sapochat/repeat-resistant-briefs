@@ -1,0 +1,8 @@
+{
+  "report_id": "readme-example-2026-07-20",
+  "delivered_at": "2026-07-20",
+  "items": [
+    {"identity": "paper:new-context"},
+    {"identity": "repo:openhuman"}
+  ]
+}

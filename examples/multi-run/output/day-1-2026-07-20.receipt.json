@@ -1,0 +1,12 @@
+{
+  "report_id": "demo-day-1",
+  "delivered_at": "2026-07-20",
+  "items": [
+    {
+      "identity": "signal:alpha"
+    },
+    {
+      "identity": "signal:beta"
+    }
+  ]
+}

@@ -1,15 +1,20 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "repeat-resistant-briefs"
-version = "0.1.0"
+version = "0.2.0"
 description = "Build history-aware source packs for recurring reports and newsletters"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{name = "Santi Pochat"}]
+
+[project.urls]
+Repository = "https://github.com/sapochat/repeat-resistant-briefs"
+Issues = "https://github.com/sapochat/repeat-resistant-briefs/issues"
 
 [project.scripts]
 repeat-resistant-briefs = "repeat_resistant_briefs.cli:main"

@@ -6,28 +6,47 @@
       "signal:beta",
       "signal:gamma"
     ],
+    "delivered": [
+      "signal:alpha",
+      "signal:beta"
+    ],
     "suppressed": [],
-    "source_pack": "day-1-2026-07-20.md"
+    "source_pack": "day-1-2026-07-20.md",
+    "selection": "day-1-2026-07-20.selection.json",
+    "receipt": "day-1-2026-07-20.receipt.json"
   },
   {
     "date": "2026-07-21",
     "selected": [
+      "signal:beta",
+      "signal:delta",
+      "signal:gamma"
+    ],
+    "delivered": [
+      "signal:gamma",
       "signal:beta",
       "signal:delta"
     ],
     "suppressed": [
       "signal:alpha"
     ],
-    "source_pack": "day-2-2026-07-21.md"
+    "source_pack": "day-2-2026-07-21.md",
+    "selection": "day-2-2026-07-21.selection.json",
+    "receipt": "day-2-2026-07-21.receipt.json"
   },
   {
     "date": "2026-07-22",
     "selected": [
       "signal:epsilon"
     ],
+    "delivered": [
+      "signal:epsilon"
+    ],
     "suppressed": [
       "signal:beta"
     ],
-    "source_pack": "day-3-2026-07-22.md"
+    "source_pack": "day-3-2026-07-22.md",
+    "selection": "day-3-2026-07-22.selection.json",
+    "receipt": "day-3-2026-07-22.receipt.json"
   }
 ]
